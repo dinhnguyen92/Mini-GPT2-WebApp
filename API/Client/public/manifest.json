@@ -1,0 +1,8 @@
+{
+  "short_name": "Fiction Writing Generator",
+  "name": "Fiction Writing Generator",
+  "start_url": ".",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
