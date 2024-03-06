@@ -75,6 +75,7 @@ export class CardNodeWidget extends React.Component<CardNodeProps> {
               labelPosition='right'
               as='a'
               href={this.props.model.sourceLink}
+              target='_blank'
               rel='noopener noreferrer'
             >
               Source code

@@ -29,7 +29,7 @@ export default function generateArchitectureDiagramEngine(canvasHeight: number, 
     image: 'google-colab.png',
     tech: 'PyTorch, Hugging Face, NumPy',
     role: 'Trains transformers from scratch following GPT-2 architecture using AdamW optimizer and cosine annealing with warm restarts.',
-    sourceLink: 'dummylink'
+    sourceLink: 'https://colab.research.google.com/drive/170wAM19ru9AZuOFzaK8VQp5HauPoldcY?usp=sharing'
   })
   colabNode.setPosition(col1XOffset, row1YOffset)
 
@@ -60,7 +60,7 @@ export default function generateArchitectureDiagramEngine(canvasHeight: number, 
     image: 'fast-api.svg',
     tech: 'Docker, FastAPI, PyTorch, Hugging Face, Azure App Service',
     role: "Hosts trained transformers and apply sampling function on transformers' output logits to generate text.",
-    sourceLink: 'Dummy link'
+    sourceLink: 'https://github.com/dinhnguyen92/Mini-GPT2-API'
   })
   fastApiNode.setPosition(col1XOffset, row2YOffset)
 
@@ -75,7 +75,7 @@ export default function generateArchitectureDiagramEngine(canvasHeight: number, 
     image: 'asp-net.png',
     tech: 'ASP.NET, C# 8.0, Azure App Service',
     role: "Public-facing API to expose transformer's capabilities using CQRS and Mediator design patterns.",
-    sourceLink: 'Dummy link'
+    sourceLink: 'https://github.com/dinhnguyen92/Mini-GPT2-WebApp'
   })
   dotNetWebApiNode.setPosition(col2XOffset, row2YOffset)
 
@@ -94,7 +94,7 @@ export default function generateArchitectureDiagramEngine(canvasHeight: number, 
     image: 'react.png',
     tech: 'React, Redux, Typescript, npm',
     role: 'Provides dynamic GUI in web browser for end user to interact with transformers.',
-    sourceLink: 'Dummy link'
+    sourceLink: 'https://github.com/dinhnguyen92/Mini-GPT2-WebApp/tree/main/API/Client'
   })
   reactClientNode.setPosition(col3XOffset, canvasHeight / 3)
 
