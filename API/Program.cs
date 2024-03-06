@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region Add services to the container.
 
-builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration, builder.Environment);
 

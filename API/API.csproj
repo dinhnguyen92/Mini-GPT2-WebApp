@@ -6,13 +6,14 @@
 	<!-- <ImplicitUsings>enable</ImplicitUsings> -->
     <InvariantGlobalization>true</InvariantGlobalization>
     <UserSecretsId>81d72b8c-105b-463d-99a9-0a058dc2d93c</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/f4e542ac-e8f6-4bc8-a66e-c953510faf4a/resourceGroups/mini-gpt2/providers/microsoft.insights/components/Mini-GPT2-WebApp</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="8.0.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>

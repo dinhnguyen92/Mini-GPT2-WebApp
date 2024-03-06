@@ -1,9 +1,10 @@
 ﻿using ApplicationLogic.RequestHandling;
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+using System;
 
 namespace API.Extensions
 {
@@ -11,12 +12,19 @@ namespace API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config, IHostEnvironment env)
         {
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen(opt =>
+            // Add Application Insights telemetry collection if deployed in production
+            if (env.IsProduction())
             {
-                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
-            });
+                string APP_INSIGHTS_CONNECTION_KEY= "APPLICATIONINSIGHTS_CONNECTION_STRING";
+                var appInsightsConnectionString = config[APP_INSIGHTS_CONNECTION_KEY] ??
+                    throw new ArgumentNullException(APP_INSIGHTS_CONNECTION_KEY);
+
+                services.AddApplicationInsightsTelemetry(
+                    new ApplicationInsightsServiceOptions
+                    {
+                        ConnectionString = appInsightsConnectionString
+                    });
+            }
 
             services.AddLogging(delegate (ILoggingBuilder loggingBuilder)
             {
