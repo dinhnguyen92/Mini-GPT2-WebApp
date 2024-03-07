@@ -18,11 +18,7 @@ builder.Services.AddApplicationServices(builder.Configuration, builder.Environme
 var app = builder.Build();
 
 app.UseMiddleware<ExceptionMiddleware>();
-
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
 app.UseRouting();
 
 app.MapControllerRoute(
