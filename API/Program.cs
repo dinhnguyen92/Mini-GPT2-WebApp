@@ -1,11 +1,21 @@
 using API.Extensions;
 using API.Middleware;
+using Azure.Identity;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
 #region Add services to the container.
+
+if (builder.Environment.IsProduction())
+{
+    var keyVaultUri = builder.Configuration["KeyVaultURI"] ?? throw new ArgumentNullException("KeyVaultURI");
+    builder.Configuration.AddAzureKeyVault(new Uri(keyVaultUri), new DefaultAzureCredential());
+}
 
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration, builder.Environment);
