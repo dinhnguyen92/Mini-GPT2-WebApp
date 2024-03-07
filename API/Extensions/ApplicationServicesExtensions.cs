@@ -15,7 +15,7 @@ namespace API.Extensions
             // Add Application Insights telemetry collection if deployed in production
             if (env.IsProduction())
             {
-                string APP_INSIGHTS_CONNECTION_KEY= "AppInsightsConnectionString";
+                string APP_INSIGHTS_CONNECTION_KEY= "APPLICATIONINSIGHTS_CONNECTION_STRING";
                 var appInsightsConnectionString = config[APP_INSIGHTS_CONNECTION_KEY] ??
                     throw new ArgumentNullException(APP_INSIGHTS_CONNECTION_KEY);
 

@@ -2,7 +2,7 @@
   "dependencies": {
     "appInsights1": {
       "type": "appInsights",
-      "connectionId": "AppInsightsConnectionString",
+      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING",
       "dynamicId": null
     }
   }
