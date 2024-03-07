@@ -18,10 +18,10 @@ namespace DataIntegration.InferenceService
         {
             RestClient = new HttpRestClient(new HttpClientConfig(
                 config,
-                "InferenceService:ApiKey",
-                "InferenceService:ApiHost",
-                "InferenceService:CloudRootUrl",
-                "InferenceService:LocalRootUrl"));
+                "InferenceApiKey",
+                "InferenceApiHost",
+                "InferenceCloudRootUrl",
+                "InferenceLocalRootUrl"));
         }
 
         private string MODELS_PATH = "models";
