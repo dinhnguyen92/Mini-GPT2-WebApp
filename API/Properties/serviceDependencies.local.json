@@ -4,7 +4,7 @@
       "secretStore": "LocalSecretsFile",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/Mini-GPT2-WebApp",
       "type": "appInsights.azure",
-      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+      "connectionId": "AppInsightsConnectionString",
       "dynamicId": null
     }
   }
