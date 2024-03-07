@@ -4,12 +4,6 @@ export interface LoadingMessage {
 }
 
 const loadingMessages: LoadingMessage[] = [
-  { message: "You're seriously outsourcing your English homework to me?" },
-  { message: "This will take a while. You have writer's block. Why can't I?" },
-  { message: "Like you, I'm a bad writer. But unlike you, I'm a machine and thus am incapable of shame." },
-  { message: "You hate deadlines? Then don't rush me." },
-  { message: "You have but one brain. I have multiple CPUs. That's why I take longer to think." },
-  { message: "My creator is a writer too. It's just that his readers are all machines." },
   { message: "\"We write to taste life twice, in the moment and in retrospect.\"", author: "Anaïs Nin" },
   { message: "\"One day I will find the right words, and they will be simple.\"", author: "Jack Kerouac"},
   { message: "\"Fiction is the truth inside the lie.\"", author: "Stephen King"},
